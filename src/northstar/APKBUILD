@@ -9,7 +9,7 @@ url="https://northstar.tf"
 license="MIT"
 
 arch="x86_64"
-source="https://github.com/wolf109909/NorthstarCN_DockerFile/releases/download/v${pkgver}/v${pkgver}.zip"
+source="https://github.com/R2Northstar/Northstar/releases/download/v${pkgver}/Northstar.release.v${pkgver}.zip"
 
 check() {
 	ls "$srcdir"
@@ -25,5 +25,5 @@ package() {
 	cp -r "$srcdir/." "$pkgdir/usr/lib/northstar/"
 }
 sha512sums="
-8715159ae574b1bfc00c7c15ccb07998230d7b73a9ad62bdb05bc088e40f753dac383dfcfdea83fe3824cb83aceef56360ed8493f6e4757b756164fd649d615c  v1.6.3.zip
+87cb702b1ae450bb6d561ba2d4b9304f3ce3e6fc3c3aaee3817e63026af55e584519190a26e266409f89e81bfef16bc2c459b0e593b41fc964eded77614a68d4  Northstar.release.v1.6.3.zip
 "
