@@ -9,7 +9,7 @@ url="https://northstar.tf"
 license="MIT"
 
 arch="x86_64"
-source="https://github.com/R2NorthstarCN/NorthstarCN_Launcher/releases/download/v${pkgver}/v${pkgver}.zip"
+source="https://github.com/R2NorthstarCN/R2NorthstarCN_Launcher/releases/download/v${pkgver}/v${pkgver}.zip"
 
 check() {
 	ls "$srcdir"
