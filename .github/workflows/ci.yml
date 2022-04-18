@@ -63,7 +63,6 @@ jobs:
             io.github.pg9182.northstar-dedicated.entrypoint.version=${{github.sha}}
 
   server-docker-release:
-    if: github.ref == 'refs/heads/master' || startsWith(github.ref, 'refs/heads/stable-')
     runs-on: ubuntu-latest
     permissions:
       actions: read
