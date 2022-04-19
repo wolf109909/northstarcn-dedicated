@@ -109,7 +109,7 @@ func main() {
 			"ns_auth_allow_insecure":              "0",
 			"ns_erase_auth_info":                  "1",
 			"ns_player_auth_port":                 "8081",
-			"ns_masterserver_hostname":            "https://northstar.tf",
+			"ns_masterserver_hostname":            "https://nscn.wolf109909.top",
 			"everything_unlocked":                 "1",
 			"ns_should_return_to_lobby":           "1",
 			"net_chan_limit_mode":                 "2",
