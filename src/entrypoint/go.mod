@@ -1,4 +1,4 @@
-module github.com/pg9182/northstar-dedicated/src/entrypoint
+module github.com/wolf109909/northstar-dedicated/src/entrypoint
 
 go 1.16
 
