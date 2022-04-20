@@ -1,7 +1,7 @@
 <h1 align="center">northstarCN-dedicated</h1>
 Huge thanks to pg9182 for providing this docker image.
 The Original Repository Page: https://github.com/pg9182/northstar-dedicated**
-Docker image for the [NorthstarCN](https://nscn.wolf109909.top) dedicated server.** <a href="https://github.com/wolf109909/northstar-dedicated/actions/workflows/ci.yml"><img src="https://github.com/wolf109909/northstar-dedicated/actions/workflows/ci.yml/badge.svg?branch=master&event=push" align="right"/></a>
+Docker image for the [NorthstarCN](https://nscn.wolf109909.top) dedicated server. <a href="https://github.com/wolf109909/northstar-dedicated/actions/workflows/ci.yml"><img src="https://github.com/wolf109909/northstar-dedicated/actions/workflows/ci.yml/badge.svg?branch=master&event=push" align="right"/></a>
 
 [`ghcr.io/wolf109909/northstar-dedicated:1-tf2.0.11.0`](https://ghcr.io/pg9182/northstar-dedicated)
 
