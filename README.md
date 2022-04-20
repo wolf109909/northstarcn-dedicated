@@ -1,5 +1,5 @@
 <h1 align="center">northstarCN-dedicated</h1>
-**Huge thanks to pg9182 for providing this docker image.
+**Huge thanks to pg9182 for providing this docker image.** 
 
 The Original Repository Page: https://github.com/pg9182/northstar-dedicated
 
