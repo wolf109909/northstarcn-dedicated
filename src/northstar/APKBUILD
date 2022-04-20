@@ -24,6 +24,4 @@ package() {
 	mkdir -p "$pkgdir/usr/lib/northstar"
 	cp -r "$srcdir/." "$pkgdir/usr/lib/northstar/"
 }
-sha512sums="
-c36e4b1c74b13032aec45924802dd9ec06e2c75c4e788f0de19e75e4e237076fd7ae6dfbc55f176ed7ed58a1f79f14f51fd6ecc16057142aca2ba1695e5269d3  v1.6.3.zip
-"
+
