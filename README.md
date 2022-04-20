@@ -1,6 +1,6 @@
-<h1 align="center">northstar-dedicated</h1>
+<h1 align="center">northstarCN-dedicated</h1>
 
-**Docker image for the [Northstar](https://northstar.tf) dedicated server.** <a href="https://github.com/pg9182/northstar-dedicated/actions/workflows/ci.yml"><img src="https://github.com/pg9182/northstar-dedicated/actions/workflows/ci.yml/badge.svg?branch=master&event=push" align="right"/></a>
+**Docker image for the [NorthstarCN](https://nscn.wolf109909.top) dedicated server.** <a href="https://github.com/wolf109909/northstar-dedicated/actions/workflows/ci.yml"><img src="https://github.com/wolf109909/northstar-dedicated/actions/workflows/ci.yml/badge.svg?branch=master&event=push" align="right"/></a>
 
 [`ghcr.io/pg9182/northstar-dedicated:1-tf2.0.11.0`](https://ghcr.io/pg9182/northstar-dedicated)
 
