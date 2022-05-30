@@ -1,6 +1,10 @@
 # Maintainer: pg9182 <96569817+pg9182@users.noreply.github.com>
 pkgname=northstar
+<<<<<<< HEAD
 pkgver=1.7.2
+=======
+pkgver=1.6.4
+>>>>>>> master
 pkgver_tf=2.0.11.0
 pkgrel=0
 pkgdesc="Northstar binaries and mods"
@@ -9,7 +13,7 @@ url="https://northstar.tf"
 license="MIT"
 
 arch="x86_64"
-source="https://github.com/R2Northstar/Northstar/releases/download/v${pkgver}/Northstar.release.v${pkgver}.zip"
+source="https://github.com/R2NorthstarCN/R2NorthstarCN_Launcher/releases/download/v${pkgver}/v${pkgver}.zip"
 
 check() {
 	ls "$srcdir"
@@ -26,6 +30,11 @@ package() {
 	mkdir -p "$pkgdir/usr/lib/northstar"
 	cp -r "$srcdir/." "$pkgdir/usr/lib/northstar/"
 }
+
 sha512sums="
+<<<<<<< HEAD
 49762e5f591977a2cce4025da49770b25cca3ea191d90713d57c9f47dd34fbd0d380a19375cb00c4fe849903adcd91e9e6fe8b41790e80c9cc8397dfbd71d5ab  Northstar.release.v1.7.2.zip
+=======
+33b678cc147d7206db8f363dd7cfd5214c67d30c3f8474ad486593c9ccae21eae230d34927cc1eac1d0064a48114724df81401d877f33a5e33321e38f8f1b04f  v1.6.4.zip
+>>>>>>> master
 "
