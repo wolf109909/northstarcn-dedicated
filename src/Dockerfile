@@ -67,4 +67,5 @@ RUN /usr/bin/nswrap-wineprefix && \
     done
 EXPOSE 8081/tcp
 EXPOSE 37015/udp
-ENTRYPOINT ["sleep 30 && /usr/libexec/nsdedi"]
+RUN ["sleep", "30"]
+ENTRYPOINT ["/usr/libexec/nsdedi"]
