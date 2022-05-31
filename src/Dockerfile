@@ -67,5 +67,5 @@ RUN /usr/bin/nswrap-wineprefix && \
     done
 EXPOSE 8081/tcp
 EXPOSE 37015/udp
-RUN ["sleep", "30"]
-ENTRYPOINT ["/usr/libexec/nsdedi"]
+RUN ["echo '#!/bin/ash\nsleep30\n/usr/libexec/nsdedi' > /data/start.sh && chmod +x /data/start.sh"]
+ENTRYPOINT ["/data/start.sh"]
