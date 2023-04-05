@@ -1,6 +1,6 @@
 # Maintainer: pg9182 <96569817+pg9182@users.noreply.github.com>
 pkgname=northstar
-pkgver=1.12.8
+pkgver=1.13.4
 pkgver_tf=2.0.11.0
 pkgrel=0
 pkgdesc="NorthstarCN binaries and mods"
@@ -9,7 +9,7 @@ url="https://northstar.cool"
 license="MIT"
 
 arch="x86_64"
-source="https://github.com/wolf109909/R2NorthstarCN_Launcher/releases/download/v${pkgver}/v${pkgver}.zip"
+source="https://github.com/R2NorthstarCN/R2NorthstarCN_Launcher_Dedicated/releases/download/v${pkgver}/v${pkgver}.zip"
 
 check() {
 	ls "$srcdir"
@@ -27,5 +27,5 @@ package() {
 	cp -r "$srcdir/." "$pkgdir/usr/lib/northstar/"
 }
 sha512sums="
-64da369b44b5b25ec54c3e6d9a22e19e4a254aaca3995d09f8ec30e1d090cb41d086773dc2e9c033d5243464fa9c0284862b2a6eef4aa405f8d97f4b123aec65  v$pkgver.zip
+ff1f4d3a1a63128fc16f2e7a4aeaf62695f966ffcee47c3e9ed377890ddd03ffbe5d94f77b39c2ec002c7bee5b97d6ad82f816ba82a16253239d98e73f1bb75a  v$pkgver.zip
 "
