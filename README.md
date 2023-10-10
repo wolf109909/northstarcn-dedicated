@@ -431,6 +431,9 @@ In `NS_SERVER_NAME` and `NS_SERVER_DESC`, `{{hostname}}` will be replaced with t
 
 Additional command-line arguments (including convars starting with `+`) can be provided via the `NS_EXTRA_ARGUMENTS` environment variable. Arguments including spaces must be quoted using shell quoting rules.
 
+#### Save Data
+To persist save data from mods, mount a folder read-write to `/mnt/save_data` or a subdirectory (to limit it to a single mod). Note that some mods may or may not support sharing save data across multiple servers concurrently.
+
 ### FAQ
 
 - **The server status in htop isn't updating** <br/>
