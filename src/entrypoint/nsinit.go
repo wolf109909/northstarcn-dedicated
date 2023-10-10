@@ -68,6 +68,7 @@ func main() {
 		"/usr/lib/northstar",
 		"/mnt/mods",
 		"/mnt/navs",
+		"/mnt/save_data",
 	)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error: Failed to merge game files: %v.\n", err)
