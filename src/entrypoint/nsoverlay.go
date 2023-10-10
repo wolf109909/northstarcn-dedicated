@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"io"
 	"io/fs"
@@ -163,9 +164,11 @@ func (n *NSOverlay) mergeNavs(p string) error {
 }
 
 func (n *NSOverlay) mergeSaveData(p string) error {
-	return checkedSymlink(p, filepath.Join(n.Path, "R2Northstar", "save_data"), true)
+	if err := checkedSymlink(p, filepath.Join(n.Path, "R2Northstar", "save_data"), true); !errors.Is(err, fs.ErrNotExist) {
+		return err
+	}
+	return nil
 }
-
 func checkedSymlink(oldname, newname string, replace bool) error {
 	if _, err := os.Stat(oldname); err != nil {
 		return fmt.Errorf("access %q: %w", oldname, err)
