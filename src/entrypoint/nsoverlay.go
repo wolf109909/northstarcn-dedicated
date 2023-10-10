@@ -12,7 +12,7 @@ type NSOverlay struct {
 	Path string
 }
 
-func MergeOverlay(dir, tfPath, nsPath, modsPath, navsPath, pluginsPath, saveDataPath string) (*NSOverlay, error) {
+func MergeOverlay(dir, tfPath, nsPath, modsPath, navsPath, saveDataPath string) (*NSOverlay, error) {
 	n := new(NSOverlay)
 	if p, err := os.MkdirTemp(dir, "ns*"); err != nil {
 		return nil, fmt.Errorf("create temp dir in %q: %w", dir, err)
