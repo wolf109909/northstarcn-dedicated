@@ -90,7 +90,6 @@ func (n *NSOverlay) mergeNS(p string) error {
 		"bin/x64_dedi/d3d11.dll",
 		"bin/x64_dedi/GFSDK_SSAO.win64.dll",
 		"bin/x64_dedi/GFSDK_TXAA.win64.dll",
-		"bin/x64_retail/msvcp140_atomic_wait.dll",
 	} {
 		if _, err := os.Stat(filepath.Join(p, x)); err != nil {
 			return fmt.Errorf("northstar build missing stubs (is it 1.6 or newer?): %w", err)
