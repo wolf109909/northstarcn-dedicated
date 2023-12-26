@@ -1,6 +1,6 @@
 # Maintainer: pg9182 <96569817+pg9182@users.noreply.github.com>
 pkgname=northstar
-pkgver=1.15.8
+pkgver=1.16.0
 pkgver_tf=2.0.11.0
 pkgrel=0
 pkgdesc="NorthstarCN binaries and mods"
@@ -27,5 +27,5 @@ package() {
 	cp -r "$srcdir/." "$pkgdir/usr/lib/northstar/"
 }
 sha512sums="
-d0d78faf97b012a4cca8190d905ca8554165492edaa8e2455471974abb2f1177be46c557188d067e39c0fb1c6b62cb51578fcbbe305ab6818e332904324d4913  v$pkgver.zip
+9b92494bee48751fcafb4002318cff5b4c8fb53558203be72ce5eb60858b4c032bbcc74e405960edfa5dd1d503d157a70c7fc9d5f82300243e9fa1317f084b30  v$pkgver.zip
 "
