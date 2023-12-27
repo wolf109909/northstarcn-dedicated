@@ -1,6 +1,6 @@
 # Maintainer: pg9182 <96569817+pg9182@users.noreply.github.com>
 pkgname=northstar-dedicated-wine
-pkgver=7.0
+pkgver=9.0
 pkgrel=0
 pkgdesc="Patched Wine build for the Northstar dedicated server"
 
@@ -19,15 +19,9 @@ makedepends="autoconf automake bison flex gnutls-dev libxi-dev mingw-w64-gcc min
 # window handle in-between ticks). This will need more debugging later.
 
 options="textrels !check"
-source="https://dl.winehq.org/wine/source/7.0/wine-$pkgver.tar.xz
-	rpath.patch
-	winemenubuilder.patch
-	ws2siobacklogquery.patch
-	wine-mr-1034.patch
-	"
-#	createwindow.patch
+source="https://github.com/WtzLAS/wine/archive/refs/tags/9.0-rc3-ns.tar.gz"
 
-builddir="$srcdir/wine-$pkgver"
+builddir="$srcdir/wine-9.0-rc3-ns"
 
 build() {
 	local _win64 _no_pie
@@ -190,8 +184,8 @@ build() {
 		--disable-resutils --disable-riched20 --disable-riched32 --disable-rsabase --disable-rstrtmgr --disable-rtutils --disable-rtworkq --disable-samlib \
 		--disable-sane_ds --disable-sas --disable-scarddlg --disable-sccbase --disable-schedsvc --disable-scrobj --disable-scrrun --disable-security \
 		--disable-sensapi --disable-serialui --disable-sfc --disable-sfc_os --disable-shdoclc --disable-shfolder --disable-slbcsp --disable-slc \
-		--disable-snmpapi --disable-softpub --disable-spoolss --disable-sppc --disable-srclient --disable-srvcli --disable-sspicli --disable-stdole2_tlb \
-		--disable-stdole32_tlb --disable-sti --disable-strmdll --disable-svrapi --disable-sxs --disable-t2embed --disable-tapi32 --disable-taskschd \
+		--disable-snmpapi --disable-softpub --disable-spoolss --disable-sppc --disable-srclient --disable-srvcli --disable-sspicli \
+		--disable-sti --disable-strmdll --disable-svrapi --disable-sxs --disable-t2embed --disable-tapi32 --disable-taskschd \
 		--disable-tbs --disable-tdh --disable-traffic --disable-twain_32 --disable-uianimation --disable-uiautomationcore --disable-uiribbon \
 		--disable-unicows --disable-updspapi --disable-url --disable-usp10 --disable-utildll --disable-vbscript --disable-vcomp --disable-vcomp100 \
 		--disable-vcomp110 --disable-vcomp120 --disable-vcomp140 --disable-vcomp90 --disable-vdmdbg --disable-vga --disable-virtdisk --disable-vssapi \
@@ -253,14 +247,14 @@ build() {
 		# xargs echo | fold -sw150 | sed 's/$/\\/g'
 		# popd
 		#
-	make LDFLAGS="$LDFLAGS $_no_pie" \
+	make -j8 LDFLAGS="$LDFLAGS $_no_pie" \
 		tools/widl/widl \
-		tools/winebuild/winebuild \
-		tools/widl/widl \
-		tools/winebuild/winebuild \
-		tools/winegcc/winegcc \
-		tools/wrc/wrc
-	make
+	 	tools/winebuild/winebuild \
+	 	tools/widl/widl \
+	 	tools/winebuild/winebuild \
+	 	tools/winegcc/winegcc \
+	 	tools/wrc/wrc
+	make -j8
 }
 
 package() {
@@ -298,10 +292,5 @@ doc() {
 }
 
 sha512sums="
-eec17b046ed5447eb540f421c9b2748d9419ce087496c2743a9914fd27bbe5ff9da0cfe47d3cd76fa97323bd1188a1d82b1eef4968d86ed1957dc1a95e28529c  wine-7.0.tar.xz
-1f023ec35610d7f39eee5ee8e53abf8905509dd37513a1ec00f498e5e28890c60555d43daeae28b806879050b3422575f3552fa338177e923b0471c89418a607  rpath.patch
-eaaa991510d6de7f33ea8d81954737ab4a18f40675f3fa5822367fe40e439880246209d913f646e80e1120d59fcedaf97d069cf1b203c0d7d032bc8b07faa29d  winemenubuilder.patch
-bf1630e4f8aab6b220eb95beafe2891549bb6d7be17aed9bbd1269409fd589f05fc9b68c123d58cdfc5eff60d53518b232c59b6c4648b7c6e36a2416f4913d33  ws2siobacklogquery.patch
-caa47044e6caa5edb3f55596bfcc96c0e6166a7d84bc66e13813a1665e27b15524ac4db3bc354d89491d0ba2e8356075141fc21e21662d1469843699e9088da1  wine-mr-1034.patch
+24890639edcab406225f839c2cf7f3d9d0b37adf386cae53ce89278e896082772b078f7652745c241a0cc770c97b493a7414e6893d3db1787097cdad1c434b89  9.0-rc3-ns.tar.gz
 "
-#996a6fcf19875b170eb51ccd6f4e5ec32f77326a7ab8c6227c0fa4e3acacf9330efeafdb77de17a176e73d1ec7f58cac3293302833284ce805b6b5e751f9615e  createwindow.patch
