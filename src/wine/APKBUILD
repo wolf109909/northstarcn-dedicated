@@ -19,7 +19,7 @@ makedepends="autoconf automake bison flex gnutls-dev libxi-dev mingw-w64-gcc min
 # window handle in-between ticks). This will need more debugging later.
 
 options="textrels !check"
-source="https://github.com/WtzLAS/wine/archive/refs/tags/9.0-rc3-ns.tar.gz"
+source="https://dl.winehq.org/wine/source/9.x/wine-9.19.tar.xz"
 
 builddir="$srcdir/wine-9.0-rc3-ns"
 
@@ -292,5 +292,5 @@ doc() {
 }
 
 sha512sums="
-24890639edcab406225f839c2cf7f3d9d0b37adf386cae53ce89278e896082772b078f7652745c241a0cc770c97b493a7414e6893d3db1787097cdad1c434b89  9.0-rc3-ns.tar.gz
+530219c6a337f2996eac92d644ab603528b82cc6136cc37c1e6aa736d418f33c6f4b0d54f3537b04bceaf4487d84abcf926a2f5e9536ed4e966c4fe63c5b6ddd  wine-9.19.tar.xz
 "
