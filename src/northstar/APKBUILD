@@ -21,6 +21,7 @@ check() {
 	test -f "$srcdir/bin/x64_dedi/d3d11.dll"
 }
 
+
 package() {
 	rm "$srcdir"/*.zip
 	mkdir -p "$pkgdir/usr/lib/northstar"
